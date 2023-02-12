@@ -1,0 +1,319 @@
+|LogicalStep_Lab2_top
+clkin_50 => segment7_mux:INST3.clk
+pb_n[0] => PB_inverters:INST4.pb_n[0]
+pb_n[1] => PB_inverters:INST4.pb_n[1]
+pb_n[2] => PB_inverters:INST4.pb_n[2]
+pb_n[3] => PB_inverters:INST4.pb_n[3]
+sw[0] => logic_processor:INST5.logic_in0[0]
+sw[0] => full_adder_4bit:INST6.INPUT_A[0]
+sw[0] => two_to_one:INST8.in0[0]
+sw[1] => logic_processor:INST5.logic_in0[1]
+sw[1] => full_adder_4bit:INST6.INPUT_A[1]
+sw[1] => two_to_one:INST8.in0[1]
+sw[2] => logic_processor:INST5.logic_in0[2]
+sw[2] => full_adder_4bit:INST6.INPUT_A[2]
+sw[2] => two_to_one:INST8.in0[2]
+sw[3] => logic_processor:INST5.logic_in0[3]
+sw[3] => full_adder_4bit:INST6.INPUT_A[3]
+sw[3] => two_to_one:INST8.in0[3]
+sw[4] => logic_processor:INST5.logic_in1[0]
+sw[4] => full_adder_4bit:INST6.INPUT_B[0]
+sw[4] => two_to_one:INST7.in0[0]
+sw[5] => logic_processor:INST5.logic_in1[1]
+sw[5] => full_adder_4bit:INST6.INPUT_B[1]
+sw[5] => two_to_one:INST7.in0[1]
+sw[6] => logic_processor:INST5.logic_in1[2]
+sw[6] => full_adder_4bit:INST6.INPUT_B[2]
+sw[6] => two_to_one:INST7.in0[2]
+sw[7] => logic_processor:INST5.logic_in1[3]
+sw[7] => full_adder_4bit:INST6.INPUT_B[3]
+sw[7] => two_to_one:INST7.in0[3]
+leds[0] <= logic_processor:INST5.logic_out[0]
+leds[1] <= logic_processor:INST5.logic_out[1]
+leds[2] <= logic_processor:INST5.logic_out[2]
+leds[3] <= logic_processor:INST5.logic_out[3]
+leds[4] <= <GND>
+leds[5] <= <GND>
+leds[6] <= <GND>
+leds[7] <= <GND>
+seg7_data[0] <= segment7_mux:INST3.DOUT[0]
+seg7_data[1] <= segment7_mux:INST3.DOUT[1]
+seg7_data[2] <= segment7_mux:INST3.DOUT[2]
+seg7_data[3] <= segment7_mux:INST3.DOUT[3]
+seg7_data[4] <= segment7_mux:INST3.DOUT[4]
+seg7_data[5] <= segment7_mux:INST3.DOUT[5]
+seg7_data[6] <= segment7_mux:INST3.DOUT[6]
+seg7_char1 <= segment7_mux:INST3.DIG1
+seg7_char2 <= segment7_mux:INST3.DIG2
+
+
+|LogicalStep_Lab2_top|SevenSegment:INST1
+hex[0] => Mux0.IN19
+hex[0] => Mux1.IN19
+hex[0] => Mux2.IN19
+hex[0] => Mux3.IN19
+hex[0] => Mux4.IN19
+hex[0] => Mux5.IN19
+hex[0] => Mux6.IN19
+hex[1] => Mux0.IN18
+hex[1] => Mux1.IN18
+hex[1] => Mux2.IN18
+hex[1] => Mux3.IN18
+hex[1] => Mux4.IN18
+hex[1] => Mux5.IN18
+hex[1] => Mux6.IN18
+hex[2] => Mux0.IN17
+hex[2] => Mux1.IN17
+hex[2] => Mux2.IN17
+hex[2] => Mux3.IN17
+hex[2] => Mux4.IN17
+hex[2] => Mux5.IN17
+hex[2] => Mux6.IN17
+hex[3] => Mux0.IN16
+hex[3] => Mux1.IN16
+hex[3] => Mux2.IN16
+hex[3] => Mux3.IN16
+hex[3] => Mux4.IN16
+hex[3] => Mux5.IN16
+hex[3] => Mux6.IN16
+sevenseg[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+sevenseg[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+sevenseg[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+sevenseg[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+sevenseg[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+sevenseg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+sevenseg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab2_top|SevenSegment:INST2
+hex[0] => Mux0.IN19
+hex[0] => Mux1.IN19
+hex[0] => Mux2.IN19
+hex[0] => Mux3.IN19
+hex[0] => Mux4.IN19
+hex[0] => Mux5.IN19
+hex[0] => Mux6.IN19
+hex[1] => Mux0.IN18
+hex[1] => Mux1.IN18
+hex[1] => Mux2.IN18
+hex[1] => Mux3.IN18
+hex[1] => Mux4.IN18
+hex[1] => Mux5.IN18
+hex[1] => Mux6.IN18
+hex[2] => Mux0.IN17
+hex[2] => Mux1.IN17
+hex[2] => Mux2.IN17
+hex[2] => Mux3.IN17
+hex[2] => Mux4.IN17
+hex[2] => Mux5.IN17
+hex[2] => Mux6.IN17
+hex[3] => Mux0.IN16
+hex[3] => Mux1.IN16
+hex[3] => Mux2.IN16
+hex[3] => Mux3.IN16
+hex[3] => Mux4.IN16
+hex[3] => Mux5.IN16
+hex[3] => Mux6.IN16
+sevenseg[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+sevenseg[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+sevenseg[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+sevenseg[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+sevenseg[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+sevenseg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+sevenseg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab2_top|segment7_mux:INST3
+clk => \clk_proc:COUNT[0].CLK
+clk => \clk_proc:COUNT[1].CLK
+clk => \clk_proc:COUNT[2].CLK
+clk => \clk_proc:COUNT[3].CLK
+clk => \clk_proc:COUNT[4].CLK
+clk => \clk_proc:COUNT[5].CLK
+clk => \clk_proc:COUNT[6].CLK
+clk => \clk_proc:COUNT[7].CLK
+clk => \clk_proc:COUNT[8].CLK
+clk => \clk_proc:COUNT[9].CLK
+clk => \clk_proc:COUNT[10].CLK
+DIN2[0] => DOUT_TEMP.DATAB
+DIN2[1] => DOUT_TEMP[1].DATAB
+DIN2[2] => DOUT_TEMP.DATAB
+DIN2[3] => DOUT_TEMP.DATAB
+DIN2[4] => DOUT_TEMP.DATAB
+DIN2[5] => DOUT_TEMP[5].DATAB
+DIN2[6] => DOUT_TEMP[6].DATAB
+DIN1[0] => DOUT_TEMP.DATAA
+DIN1[1] => DOUT_TEMP[1].DATAA
+DIN1[2] => DOUT_TEMP.DATAA
+DIN1[3] => DOUT_TEMP.DATAA
+DIN1[4] => DOUT_TEMP.DATAA
+DIN1[5] => DOUT_TEMP[5].DATAA
+DIN1[6] => DOUT_TEMP[6].DATAA
+DOUT[0] <= DOUT_TEMP.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[1] <= DOUT[1].DB_MAX_OUTPUT_PORT_TYPE
+DOUT[2] <= DOUT_TEMP.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[3] <= DOUT_TEMP.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[4] <= DOUT_TEMP.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[5] <= DOUT[5].DB_MAX_OUTPUT_PORT_TYPE
+DOUT[6] <= DOUT[6].DB_MAX_OUTPUT_PORT_TYPE
+DIG2 <= \clk_proc:COUNT[10].DB_MAX_OUTPUT_PORT_TYPE
+DIG1 <= \clk_proc:COUNT[10].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab2_top|PB_inverters:INST4
+pb_n[0] => pb[0].DATAIN
+pb_n[1] => pb[1].DATAIN
+pb_n[2] => pb[2].DATAIN
+pb_n[3] => pb[3].DATAIN
+pb[0] <= pb_n[0].DB_MAX_OUTPUT_PORT_TYPE
+pb[1] <= pb_n[1].DB_MAX_OUTPUT_PORT_TYPE
+pb[2] <= pb_n[2].DB_MAX_OUTPUT_PORT_TYPE
+pb[3] <= pb_n[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab2_top|logic_processor:INST5
+logic_in0[0] => logic_out.IN0
+logic_in0[0] => logic_out.IN0
+logic_in0[0] => logic_out.IN0
+logic_in0[0] => logic_out.IN0
+logic_in0[1] => logic_out.IN0
+logic_in0[1] => logic_out.IN0
+logic_in0[1] => logic_out.IN0
+logic_in0[1] => logic_out.IN0
+logic_in0[2] => logic_out.IN0
+logic_in0[2] => logic_out.IN0
+logic_in0[2] => logic_out.IN0
+logic_in0[2] => logic_out.IN0
+logic_in0[3] => logic_out.IN0
+logic_in0[3] => logic_out.IN0
+logic_in0[3] => logic_out.IN0
+logic_in0[3] => logic_out.IN0
+logic_in1[0] => logic_out.IN1
+logic_in1[0] => logic_out.IN1
+logic_in1[0] => logic_out.IN1
+logic_in1[0] => logic_out.IN1
+logic_in1[1] => logic_out.IN1
+logic_in1[1] => logic_out.IN1
+logic_in1[1] => logic_out.IN1
+logic_in1[1] => logic_out.IN1
+logic_in1[2] => logic_out.IN1
+logic_in1[2] => logic_out.IN1
+logic_in1[2] => logic_out.IN1
+logic_in1[2] => logic_out.IN1
+logic_in1[3] => logic_out.IN1
+logic_in1[3] => logic_out.IN1
+logic_in1[3] => logic_out.IN1
+logic_in1[3] => logic_out.IN1
+logic_select[0] => Mux0.IN5
+logic_select[0] => Mux1.IN5
+logic_select[0] => Mux2.IN5
+logic_select[0] => Mux3.IN5
+logic_select[1] => Mux0.IN4
+logic_select[1] => Mux1.IN4
+logic_select[1] => Mux2.IN4
+logic_select[1] => Mux3.IN4
+logic_out[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+logic_out[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+logic_out[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+logic_out[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab2_top|full_adder_4bit:INST6
+INPUT_B[0] => full_adder_1bit:INST1.INPUT_B
+INPUT_B[1] => full_adder_1bit:INST2.INPUT_B
+INPUT_B[2] => full_adder_1bit:INST3.INPUT_B
+INPUT_B[3] => full_adder_1bit:INST4.INPUT_B
+INPUT_A[0] => full_adder_1bit:INST1.INPUT_A
+INPUT_A[1] => full_adder_1bit:INST2.INPUT_A
+INPUT_A[2] => full_adder_1bit:INST3.INPUT_A
+INPUT_A[3] => full_adder_1bit:INST4.INPUT_A
+CARRY_IN => full_adder_1bit:INST1.CARRY_IN
+CARRY_OUT_3 <= full_adder_1bit:INST4.FULL_ADDER_CARRY_OUTPUT
+sum[0] <= full_adder_1bit:INST1.FULL_ADDER_SUM_OUTPUT
+sum[1] <= full_adder_1bit:INST2.FULL_ADDER_SUM_OUTPUT
+sum[2] <= full_adder_1bit:INST3.FULL_ADDER_SUM_OUTPUT
+sum[3] <= full_adder_1bit:INST4.FULL_ADDER_SUM_OUTPUT
+
+
+|LogicalStep_Lab2_top|full_adder_4bit:INST6|full_adder_1bit:INST1
+INPUT_A => FULL_ADDER_CARRY_OUTPUT.IN0
+INPUT_A => FULL_ADDER_CARRY_OUTPUT.IN0
+INPUT_B => FULL_ADDER_CARRY_OUTPUT.IN1
+INPUT_B => FULL_ADDER_CARRY_OUTPUT.IN1
+CARRY_IN => FULL_ADDER_SUM_OUTPUT.IN1
+CARRY_IN => FULL_ADDER_CARRY_OUTPUT.IN1
+FULL_ADDER_CARRY_OUTPUT <= FULL_ADDER_CARRY_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+FULL_ADDER_SUM_OUTPUT <= FULL_ADDER_SUM_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab2_top|full_adder_4bit:INST6|full_adder_1bit:INST2
+INPUT_A => FULL_ADDER_CARRY_OUTPUT.IN0
+INPUT_A => FULL_ADDER_CARRY_OUTPUT.IN0
+INPUT_B => FULL_ADDER_CARRY_OUTPUT.IN1
+INPUT_B => FULL_ADDER_CARRY_OUTPUT.IN1
+CARRY_IN => FULL_ADDER_SUM_OUTPUT.IN1
+CARRY_IN => FULL_ADDER_CARRY_OUTPUT.IN1
+FULL_ADDER_CARRY_OUTPUT <= FULL_ADDER_CARRY_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+FULL_ADDER_SUM_OUTPUT <= FULL_ADDER_SUM_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab2_top|full_adder_4bit:INST6|full_adder_1bit:INST3
+INPUT_A => FULL_ADDER_CARRY_OUTPUT.IN0
+INPUT_A => FULL_ADDER_CARRY_OUTPUT.IN0
+INPUT_B => FULL_ADDER_CARRY_OUTPUT.IN1
+INPUT_B => FULL_ADDER_CARRY_OUTPUT.IN1
+CARRY_IN => FULL_ADDER_SUM_OUTPUT.IN1
+CARRY_IN => FULL_ADDER_CARRY_OUTPUT.IN1
+FULL_ADDER_CARRY_OUTPUT <= FULL_ADDER_CARRY_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+FULL_ADDER_SUM_OUTPUT <= FULL_ADDER_SUM_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab2_top|full_adder_4bit:INST6|full_adder_1bit:INST4
+INPUT_A => FULL_ADDER_CARRY_OUTPUT.IN0
+INPUT_A => FULL_ADDER_CARRY_OUTPUT.IN0
+INPUT_B => FULL_ADDER_CARRY_OUTPUT.IN1
+INPUT_B => FULL_ADDER_CARRY_OUTPUT.IN1
+CARRY_IN => FULL_ADDER_SUM_OUTPUT.IN1
+CARRY_IN => FULL_ADDER_CARRY_OUTPUT.IN1
+FULL_ADDER_CARRY_OUTPUT <= FULL_ADDER_CARRY_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+FULL_ADDER_SUM_OUTPUT <= FULL_ADDER_SUM_OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab2_top|two_to_one:INST7
+in0[0] => hex_out.DATAB
+in0[1] => hex_out.DATAB
+in0[2] => hex_out.DATAB
+in0[3] => hex_out.DATAB
+in1[0] => hex_out.DATAA
+in1[1] => hex_out.DATAA
+in1[2] => hex_out.DATAA
+in1[3] => hex_out.DATAA
+hex_select => hex_out.OUTPUTSELECT
+hex_select => hex_out.OUTPUTSELECT
+hex_select => hex_out.OUTPUTSELECT
+hex_select => hex_out.OUTPUTSELECT
+hex_out[0] <= hex_out.DB_MAX_OUTPUT_PORT_TYPE
+hex_out[1] <= hex_out.DB_MAX_OUTPUT_PORT_TYPE
+hex_out[2] <= hex_out.DB_MAX_OUTPUT_PORT_TYPE
+hex_out[3] <= hex_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab2_top|two_to_one:INST8
+in0[0] => hex_out.DATAB
+in0[1] => hex_out.DATAB
+in0[2] => hex_out.DATAB
+in0[3] => hex_out.DATAB
+in1[0] => hex_out.DATAA
+in1[1] => hex_out.DATAA
+in1[2] => hex_out.DATAA
+in1[3] => hex_out.DATAA
+hex_select => hex_out.OUTPUTSELECT
+hex_select => hex_out.OUTPUTSELECT
+hex_select => hex_out.OUTPUTSELECT
+hex_select => hex_out.OUTPUTSELECT
+hex_out[0] <= hex_out.DB_MAX_OUTPUT_PORT_TYPE
+hex_out[1] <= hex_out.DB_MAX_OUTPUT_PORT_TYPE
+hex_out[2] <= hex_out.DB_MAX_OUTPUT_PORT_TYPE
+hex_out[3] <= hex_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

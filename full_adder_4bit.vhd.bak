@@ -1,0 +1,4 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+ENTITY full_adder_4bit IS
