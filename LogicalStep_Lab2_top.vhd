@@ -6,8 +6,8 @@ use ieee.numeric_std.all;
 
 entity LogicalStep_Lab2_top is port (
    clkin_50			: in	std_logic;
-	pb_n				: in	std_logic_vector(3 downto 0);
- 	sw   				: in  std_logic_vector(7 downto 0); -- The switch inputs
+	pb_n			: in	std_logic_vector(3 downto 0);
+ 	sw   			: in  std_logic_vector(7 downto 0); -- The switch inputs
    leds				: out std_logic_vector(7 downto 0); -- for displaying the switch content
    seg7_data 		: out std_logic_vector(6 downto 0); -- 7-bit outputs to a 7-segment
 	seg7_char1  	: out	std_logic;				    		-- seg7 digit1 selector
@@ -31,22 +31,22 @@ architecture SimpleCircuit of LogicalStep_Lab2_top is
 		DIN2        : in std_logic_vector(6 downto 0);
 		DIN1        : in std_logic_vector(6 downto 0);
 		DOUT        : out std_logic_vector(6 downto 0);
-		DIG2			: out std_logic;
-		DIG1			: out std_logic
+		DIG2		: out std_logic;
+		DIG1		: out std_logic
 		);
 	end component;
 	
 	component logic_processor port(
 		logic_in0		: in std_logic_vector(3 downto 0);
 		logic_in1		: in std_logic_vector(3 downto 0);
-		logic_select   : in std_logic_vector(1 downto 0);
+		logic_select    : in std_logic_vector(1 downto 0);
 		logic_out		: out std_logic_vector(3 downto 0)
 		);
 	end component;
 	
 	component PB_inverters port(
 		pb_n  : in std_logic_vector(3 downto 0); -- push buttons
-		pb 	: out std_logic_vector(3 downto 0) -- outputs inverted push button signals
+		pb 	  : out std_logic_vector(3 downto 0) -- outputs inverted push button signals
 		);
 	end component;
 	
@@ -54,16 +54,16 @@ architecture SimpleCircuit of LogicalStep_Lab2_top is
 		INPUT_A 		: in std_logic_vector(3 downto 0);
 		INPUT_B 		: in std_logic_vector(3 downto 0);
 		CARRY_IN		: in std_logic;
-		CARRY_OUT_3 : out std_logic;
-		SUM			: out std_logic_vector(3 downto 0)
+		CARRY_OUT_3 	: out std_logic;
+		SUM				: out std_logic_vector(3 downto 0)
 		);
 	end component;
 	
 	component two_to_one port(
-		in0 			: in std_logic_vector(3 downto 0);
+		in0 		: in std_logic_vector(3 downto 0);
 		in1			: in std_logic_vector(3 downto 0);
 		hex_select	: in std_logic;
-		hex_out 		: out std_logic_vector(3 downto 0)
+		hex_out 	: out std_logic_vector(3 downto 0)
 		);
 	end component;
  
@@ -80,15 +80,15 @@ architecture SimpleCircuit of LogicalStep_Lab2_top is
 	signal carry_out 	: std_logic;						  -- full_adder4bit output signal					
 	signal sum 			: std_logic_vector(3 downto 0); -- full_adder4bit output signal		
 	signal signal_C 	: std_logic_vector(3 downto 0); -- signal used to concatenate carry_out and "000"
-	signal signal_A	: std_logic_vector(3 downto 0); -- 4 bit signal to be used as hex_out value in INST7, will be converted to 7 bits for display
-	signal signal_B	: std_logic_vector(3 downto 0); -- 4 bit signal to be used as hex_out value in INST8, will be converted to 7 bits for display
+	signal signal_A		: std_logic_vector(3 downto 0); -- 4 bit signal to be used as hex_out value in INST7, will be converted to 7 bits for display
+	signal signal_B		: std_logic_vector(3 downto 0); -- 4 bit signal to be used as hex_out value in INST8, will be converted to 7 bits for display
 	
 -- Here the circuit begins
 
 	begin
 
-		hex_A <= sw(3 downto 0); 				-- connects hex_A to swtiches 0 to 3
-		hex_B <= sw(7 downto 4); 				-- connects hex_B to swtiches 4 to 7
+		hex_A 	 <= sw(3 downto 0); 				-- connects hex_A to swtiches 0 to 3
+		hex_B 	 <= sw(7 downto 4); 				-- connects hex_B to swtiches 4 to 7
 		signal_C <= "000" & carry_out;		-- concatenate 3-bit signal and 1-bit signal to a 4-bit signal
 	
 

@@ -15,9 +15,9 @@ architecture process_logic of logic_processor is
 begin
 
 with logic_select(1 downto 0) select
-logic_out <= (logic_in0 AND logic_in1) when "00",
-				 (logic_in0 OR logic_in1) when "01",
-				 (logic_in0 XOR logic_in1) when "10",
+logic_out <= 	(logic_in0 AND logic_in1)  when "00",
+				(logic_in0 OR logic_in1)   when "01",
+				(logic_in0 XOR logic_in1)  when "10",
 			    (logic_in0 XNOR logic_in1) when "11";
 end process_logic;
 	

@@ -16,8 +16,8 @@ begin
 
 -- for the multiplexing of four hex input busses
 with mux_select(1 downto 0) select
-hex_out <= hex_num0 when "00",
-			  hex_num1 when "01",
-			  hex_num2 when "10",
-			  hex_num3 when "11";
+hex_out <= hex_num0 	when "00",
+			  hex_num1 	when "01",
+			  hex_num2 	when "10",
+			  hex_num3 	when "11";
 end mux_logic;

@@ -10,8 +10,8 @@ use ieee.numeric_std.all;
 
 entity SevenSegment is port (
    
-   hex	   :  in  std_logic_vector(3 downto 0);   -- The 4 bit data to be displayed
-   sevenseg :  out std_logic_vector(6 downto 0)    -- 7-bit outputs to a 7-segment
+   hex	    : in  std_logic_vector(3 downto 0);   -- The 4 bit data to be displayed
+   sevenseg : out std_logic_vector(6 downto 0)    -- 7-bit outputs to a 7-segment
 ); 
 end SevenSegment;
 

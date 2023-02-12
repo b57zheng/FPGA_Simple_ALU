@@ -19,6 +19,6 @@ begin
 
 	with hex_select select
 	hex_out <= in0 when '0';
-				in1 when '1';
+			   in1 when '1';
 end two_to_one_logic;
 	

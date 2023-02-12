@@ -4,9 +4,9 @@ use ieee.std_logic_1164.all;
 
 ENTITY full_adder_1bit IS
 	port(
-			INPUT_A : IN STD_LOGIC;
-			INPUT_B : IN STD_LOGIC;
-			CARRY_IN: IN STD_LOGIC;
+			INPUT_A 				: IN STD_LOGIC;
+			INPUT_B 				: IN STD_LOGIC;
+			CARRY_IN				: IN STD_LOGIC;
 			FULL_ADDER_CARRY_OUTPUT	: OUT STD_LOGIC;
 			FULL_ADDER_SUM_OUTPUT	: OUT STD_LOGIC
 			);

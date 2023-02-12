@@ -5,17 +5,17 @@ ENTITY full_adder_4bit is port(
 	INPUT_B 		: in std_logic_vector(3 downto 0);
 	INPUT_A 		: in std_logic_vector(3 downto 0);
 	CARRY_IN		: in std_logic;
-	CARRY_OUT_3 : out std_logic;
-	sum			: out std_logic_vector(3 downto 0)
+	CARRY_OUT_3 	: out std_logic;
+	sum				: out std_logic_vector(3 downto 0)
 	);
 end full_adder_4bit;
 	
 architecture sum of full_adder_4bit is
 
 component full_adder_1bit port (
-   INPUT_A 						: in std_logic;
-	INPUT_B 						: in std_logic;
-	CARRY_IN						: in std_logic;
+   INPUT_A 					: in std_logic;
+	INPUT_B 				: in std_logic;
+	CARRY_IN				: in std_logic;
 	FULL_ADDER_CARRY_OUTPUT	: out std_logic;
 	FULL_ADDER_SUM_OUTPUT	: out std_logic
    ); 
